@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
@@ -10,6 +11,7 @@ export default class Search extends Component {
     artistaAPI: [],
     ApiOn: false,
     nameArtista: '',
+    APIvazio: false,
   };
 
   handleChange = ({ target }) => {
@@ -25,13 +27,21 @@ export default class Search extends Component {
     const { artista } = this.state;
     this.setState({ loading: true });
     const fetchAPI = await searchAlbumsAPI(artista);
-    this.setState({
-      nameArtista: artista,
-      artista: '',
-      artistaAPI: fetchAPI,
-      loading: false,
-      ApiOn: true,
-    });
+    if (fetchAPI.length === 0) {
+      this.setState({
+        ApiOn: false,
+        loading: false,
+        APIvazio: true,
+      });
+    } else {
+      this.setState({
+        nameArtista: artista,
+        artista: '',
+        artistaAPI: fetchAPI,
+        loading: false,
+        ApiOn: true,
+      });
+    }
   };
 
   render() {
@@ -42,6 +52,7 @@ export default class Search extends Component {
       artistaAPI,
       ApiOn,
       nameArtista,
+      APIvazio,
     } = this.state;
     return (
       <div data-testid="page-search">
@@ -74,11 +85,18 @@ export default class Search extends Component {
                     <img src={ e.artworkUrl100 } alt={ e.artistName } />
                     <h4>{e.collectionName}</h4>
                     <h4>{e.artistName}</h4>
+                    <Link
+                      to={ `/album/${e.collectionId}` }
+                      data-testid={ `link-to-album-${e.collectionId}` }
+                    >
+                      Coleção
+
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>) }
-
+          {APIvazio && <h1>Nenhum álbum foi encontrado</h1>}
         </section>
       </div>
     );
