@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getUser } from '../services/userAPI';
+import Carregando from './Carregando';
 
 export default class Header extends Component {
   state = {
@@ -20,7 +21,9 @@ export default class Header extends Component {
     const { user, loading } = this.state;
     return (
       <header data-testid="header-component">
-        <h1 data-testid="header-user-name">{loading ? <p>Carregando...</p> : user}</h1>
+        <h1 data-testid="header-user-name">
+          {loading ? <Carregando /> : user}
+        </h1>
       </header>
     );
   }
