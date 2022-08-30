@@ -1,21 +1,27 @@
 import React, { Component } from 'react';
-import getUser from '../services/userAPI';
+import { getUser } from '../services/userAPI';
 
 export default class Header extends Component {
   state = {
     user: '',
+    loading: true,
   };
 
-  // fetchAPI = () => {
-  //   const fetch = getUser();
-  //   this.setState({ user: fetch });
-  // };
+  componentDidMount() {
+    this.fetchAPI();
+  }
+
+  fetchAPI = async () => {
+    const fetchAPI = await getUser();
+    console.log(fetchAPI);
+    this.setState({ user: fetchAPI.name, loading: false });
+  };
 
   render() {
-    const { user } = this.state;
+    const { user, loading } = this.state;
     return (
       <header data-testid="header-component">
-        <h1>{user}</h1>
+        <h1 data-testid="header-user-name">{loading ? <p>Carregando...</p> : user}</h1>
       </header>
     );
   }
