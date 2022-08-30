@@ -32,6 +32,7 @@ export default class Login extends Component {
     await createUser({ name });
     this.setState({
       login: true,
+      loading: false,
     });
   };
 
