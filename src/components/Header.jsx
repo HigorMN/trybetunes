@@ -27,9 +27,8 @@ export default class Header extends Component {
           <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
           <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
         </nav>
-        <h1 data-testid="header-user-name">
-          {loading ? <Carregando /> : user}
-        </h1>
+
+        {loading ? <Carregando /> : <h1 data-testid="header-user-name">{user}</h1>}
       </header>
     );
   }
