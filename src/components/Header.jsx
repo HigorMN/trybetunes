@@ -22,9 +22,11 @@ export default class Header extends Component {
     const { user, loading } = this.state;
     return (
       <header data-testid="header-component">
-        <Link data-testid="link-to-search" to="/search">Pesquisar</Link>
-        <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
-        <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
+        <nav>
+          <Link data-testid="link-to-search" to="/search">Pesquisar</Link>
+          <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
+          <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
+        </nav>
         <h1 data-testid="header-user-name">
           {loading ? <Carregando /> : user}
         </h1>
