@@ -83,8 +83,6 @@ export default class Search extends Component {
                 {artistaAPI.map((e) => (
                   <li key={ e.artistaId }>
                     <img src={ e.artworkUrl100 } alt={ e.artistName } />
-                    <h4>{e.collectionName}</h4>
-                    <h4>{e.artistName}</h4>
                     <Link
                       to={ `/album/${e.collectionId}` }
                       data-testid={ `link-to-album-${e.collectionId}` }
@@ -92,6 +90,8 @@ export default class Search extends Component {
                       Coleção
 
                     </Link>
+                    <h4>{e.collectionName}</h4>
+                    <h4>{e.artistName}</h4>
                   </li>
                 ))}
               </ul>
