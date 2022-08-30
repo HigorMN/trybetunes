@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import Carregando from '../components/Carregando';
 import { createUser } from '../services/userAPI';
 
 const NUMBER_MIN = 3;
@@ -41,9 +42,10 @@ export default class Login extends Component {
     return (
       <div data-testid="page-login">
         {loading
-          ? <h1>Carregando...</h1>
+          ? <Carregando />
           : (
             <div>
+              <h1>Login</h1>
               <label htmlFor="login">
                 <input
                   type="text"

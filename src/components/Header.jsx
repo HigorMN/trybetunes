@@ -6,13 +6,10 @@ export default class Header extends Component {
     user: '',
   };
 
-  componentDidMount() {
-
-  }
-
-  feathAPI = () => {
-    const fetch = getUser();
-  };
+  // fetchAPI = () => {
+  //   const fetch = getUser();
+  //   this.setState({ user: fetch });
+  // };
 
   render() {
     const { user } = this.state;
