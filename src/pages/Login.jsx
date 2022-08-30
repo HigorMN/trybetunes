@@ -15,13 +15,11 @@ export default class Login extends Component {
 
   handlechange = ({ target }) => {
     const { value } = target;
-    if (value.length >= NUMBER_MIN) {
-      this.setState({
-        buttonDisabled: false,
-      });
-    }
+    const habilitarBtn = value.length < NUMBER_MIN;
+
     this.setState({
       name: value,
+      buttonDisabled: habilitarBtn,
     });
   };
 
