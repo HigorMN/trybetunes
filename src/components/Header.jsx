@@ -13,7 +13,6 @@ export default class Header extends Component {
 
   fetchAPI = async () => {
     const fetchAPI = await getUser();
-    console.log(fetchAPI);
     this.setState({ user: fetchAPI.name, loading: false });
   };
 
