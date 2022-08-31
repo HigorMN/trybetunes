@@ -81,7 +81,7 @@ export default class Search extends Component {
               <h3>{`Resultado de álbuns de: ${nameArtista}`}</h3>
               <ul>
                 {artistaAPI.map((e) => (
-                  <li key={ e.artistaId }>
+                  <li key={ e.collectionId }>
                     <img src={ e.artworkUrl100 } alt={ e.artistName } />
                     <Link
                       to={ `/album/${e.collectionId}` }
