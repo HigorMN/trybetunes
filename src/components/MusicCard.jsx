@@ -6,7 +6,7 @@ import Carregando from './Carregando';
 export default class MusicCard extends Component {
   state = {
     loading: false,
-    checked: false,
+    checked2: false,
   };
 
   handleChange = async ({ target }) => {
@@ -15,12 +15,12 @@ export default class MusicCard extends Component {
     const filtrar = objAPI.find((e) => e.trackId === Number(value));
     this.setState({ loading: true });
     await addSong(filtrar);
-    this.setState({ loading: false, checked: true });
+    this.setState({ loading: false, checked2: true });
   };
 
   render() {
-    const { trackName, previewUrl, trackId } = this.props;
-    const { loading, checked } = this.state;
+    const { trackName, previewUrl, trackId, checked } = this.props;
+    const { loading, checked2 } = this.state;
     return (
       <div>
         {loading
@@ -38,7 +38,7 @@ export default class MusicCard extends Component {
                   value={ trackId }
                   name="favorito"
                   id={ trackId }
-                  checked={ checked }
+                  checked={ checked || checked2 }
                   onChange={ this.handleChange }
                 />
               </label>
