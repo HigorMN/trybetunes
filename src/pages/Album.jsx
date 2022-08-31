@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
+import MusicCard from '../components/MusicCard';
 
 export default class Album extends Component {
   state = {
@@ -18,20 +19,22 @@ export default class Album extends Component {
 
   render() {
     const { musicas } = this.state;
-    if (musicas.length > 0) {
-      const name = musicas[0].artistName;
-      console.log(musicas);
-      return (
-        <div data-testid="page-album">
-          <Header />
-          <p data-testid="artist-name">{name}</p>
-          <p data-testid="album-name">{musicas[0].collectionName}</p>
-        </div>
-      );
-    }
+    console.log(musicas);
     return (
       <div data-testid="page-album">
         <Header />
+        {musicas.length > 0 && (
+          <div>
+            <p data-testid="artist-name">{musicas[0].artistName}</p>
+            <p data-testid="album-name">{musicas[0].collectionName}</p>
+            <ul>
+              {musicas.filter((e) => e.wrapperType === 'track').map((m, index) => (
+                <li key={ index }>
+                  <MusicCard trackName={ m.trackName } previewUrl={ m.previewUrl } />
+                </li>
+              ))}
+            </ul>
+          </div>)}
       </div>
     );
   }
