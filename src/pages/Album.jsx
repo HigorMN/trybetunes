@@ -20,10 +20,12 @@ export default class Album extends Component {
     const { musicas } = this.state;
     if (musicas.length > 0) {
       const name = musicas[0].artistName;
+      console.log(musicas);
       return (
         <div data-testid="page-album">
           <Header />
-          <p>{name}</p>
+          <p data-testid="artist-name">{name}</p>
+          <p data-testid="album-name">{musicas[0].collectionName}</p>
         </div>
       );
     }
