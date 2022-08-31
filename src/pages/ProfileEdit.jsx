@@ -23,15 +23,7 @@ export default class ProfileEdit extends Component {
         email: fetch.email,
         image: fetch.image,
         description: fetch.description,
-      }, () => {
-        const { name, email, description, image } = this.state;
-        const valid = !!(
-          name.length > 0
-        && email.length > 0
-        && description.length > 0
-        && image.length > 0);
-        this.setState({ btnDisabled: valid });
-      });
+      }, this.validacao);
     };
     redirecionamento();
   }
@@ -52,15 +44,17 @@ export default class ProfileEdit extends Component {
     const { value } = target;
     this.setState({
       [target.name]: value,
-    }, () => {
-      const { name, email, description, image } = this.state;
-      const valid = !!(
-        name.length > 0
-        && email.length > 0
-        && description.length > 0
-        && image.length > 0);
-      this.setState({ btnDisabled: valid });
-    });
+    }, this.validacao);
+  };
+
+  validacao = () => {
+    const { name, email, description, image } = this.state;
+    const valid = !!(
+      name.length > 0
+      && email.length > 0
+      && description.length > 0
+      && image.length > 0);
+    this.setState({ btnDisabled: valid });
   };
 
   handleClick = async () => {
