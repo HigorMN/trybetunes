@@ -19,7 +19,6 @@ export default class Album extends Component {
 
   render() {
     const { musicas } = this.state;
-    console.log(musicas);
     return (
       <div data-testid="page-album">
         <Header />
@@ -31,7 +30,12 @@ export default class Album extends Component {
               {musicas.map((e, index) => (
                 index > 0 && (
                   <li key={ index }>
-                    <MusicCard trackName={ e.trackName } previewUrl={ e.previewUrl } />
+                    <MusicCard
+                      trackName={ e.trackName }
+                      previewUrl={ e.previewUrl }
+                      trackId={ e.trackId }
+                      objAPI={ musicas }
+                    />
                   </li>
                 )
               ))}
