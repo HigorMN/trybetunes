@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Carregando from './Carregando';
 
 export default class MusicCard extends Component {
   state = {
     loading: false,
     checked2: false,
+    checked3: true,
   };
 
   handleChange = async ({ target }) => {
     const { value } = target;
+    const { checked } = this.props;
     const { objAPI } = this.props;
     const filtrar = objAPI.find((e) => e.trackId === Number(value));
-    this.setState({ loading: true });
-    await addSong(filtrar);
-    this.setState({ loading: false, checked2: true });
+    if (checked) {
+      this.setState({ loading: true });
+      await removeSong(filtrar);
+      this.setState({ loading: false, checked2: false, checked3: false });
+    } else {
+      this.setState({ loading: true });
+      await addSong(filtrar);
+      this.setState({ loading: false, checked2: true });
+    }
   };
 
   render() {
     const { trackName, previewUrl, trackId, checked } = this.props;
-    const { loading, checked2 } = this.state;
+    const { loading, checked2, checked3 } = this.state;
     return (
       <div>
         {loading
@@ -38,7 +46,7 @@ export default class MusicCard extends Component {
                   value={ trackId }
                   name="favorito"
                   id={ trackId }
-                  checked={ checked || checked2 }
+                  checked={ (checked3 && checked) || checked2 }
                   onChange={ this.handleChange }
                 />
               </label>
