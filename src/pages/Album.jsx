@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 
 export default class Album extends Component {
@@ -17,9 +18,19 @@ export default class Album extends Component {
 
   render() {
     const { musicas } = this.state;
-    console.log(musicas);
+    if (musicas.length > 0) {
+      const name = musicas[0].artistName;
+      return (
+        <div data-testid="page-album">
+          <Header />
+          <p>{name}</p>
+        </div>
+      );
+    }
     return (
-      <div data-testid="page-album">Album</div>
+      <div data-testid="page-album">
+        <Header />
+      </div>
     );
   }
 }

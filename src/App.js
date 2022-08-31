@@ -17,10 +17,6 @@ class App extends React.Component {
           <Header />
           <Search />
         </Route>
-        <Route exact path="/album/:id">
-          <Header />
-          <Album />
-        </Route>
         <Route exact path="/favorites">
           <Header />
           <Favorites />
@@ -33,6 +29,7 @@ class App extends React.Component {
           <Header />
           <ProfileEdit />
         </Route>
+        <Route exact path="/album/:id" component={ Album } />
         <Route exact path="/" component={ Login } />
         <Route path="*" component={ NotFound } />
       </Switch>
