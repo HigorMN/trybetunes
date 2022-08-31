@@ -15,7 +15,6 @@ export default class Profile extends Component {
 
   fetchUser = async () => {
     const fetch = await getUser();
-    console.log(fetch);
     this.setState({ loading: false, info: fetch });
   };
 
