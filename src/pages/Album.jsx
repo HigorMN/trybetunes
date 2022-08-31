@@ -49,7 +49,6 @@ export default class Album extends Component {
                     {musicas.map((e, index) => (
                       index > 0 && (
                         <li key={ index }>
-                          {}
                           <MusicCard
                             trackName={ e.trackName }
                             previewUrl={ e.previewUrl }
