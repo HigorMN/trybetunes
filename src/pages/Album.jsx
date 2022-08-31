@@ -34,7 +34,6 @@ export default class Album extends Component {
                     <MusicCard trackName={ e.trackName } previewUrl={ e.previewUrl } />
                   </li>
                 )
-
               ))}
             </ul>
           </div>)}
