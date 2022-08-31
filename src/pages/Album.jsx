@@ -28,10 +28,13 @@ export default class Album extends Component {
             <p data-testid="artist-name">{musicas[0].artistName}</p>
             <p data-testid="album-name">{musicas[0].collectionName}</p>
             <ul>
-              {musicas.filter((e) => e.wrapperType === 'track').map((m, index) => (
-                <li key={ index }>
-                  <MusicCard trackName={ m.trackName } previewUrl={ m.previewUrl } />
-                </li>
+              {musicas.map((e, index) => (
+                index > 0 && (
+                  <li key={ index }>
+                    <MusicCard trackName={ e.trackName } previewUrl={ e.previewUrl } />
+                  </li>
+                )
+
               ))}
             </ul>
           </div>)}
