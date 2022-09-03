@@ -48,7 +48,6 @@ export default class Header extends Component {
                 <div />
               </div>)}
         </div>
-
         <nav className="header-nav">
           <Link
             data-testid="link-to-search"
@@ -72,7 +71,6 @@ export default class Header extends Component {
             Perfil
           </Link>
         </nav>
-
       </header>
     );
   }
