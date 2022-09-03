@@ -44,7 +44,11 @@ export default class Login extends Component {
           ? <Carregando />
           : (
             <>
-              <img src={ logoDark } alt="Logo trybe tunes" />
+              <img
+                src={ logoDark }
+                alt="Logo trybe tunes"
+                className="image-login"
+              />
               <form className="container-form">
                 <div className="login-name">
                   <label htmlFor="login">

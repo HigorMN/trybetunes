@@ -8,15 +8,19 @@
   width: 75%;
 }
 
+.image-login {
+  margin: 50px;
+}
+
 .input-name {
   background-color: white;
-  border: 1px solid #e1e5eb;
-  border-radius: 0;
+  border: 1px solid #d2d3d4;
   display: block;
   font-size: 20px;
   height: 45px;
   margin: auto;
   max-width: 519px;
+  text-align: center;
   width: 80%;
 }
 
@@ -26,10 +30,6 @@
 
 .container-button {
   padding-top: 40px;
-}
-
-input::placeholder {
-  padding: 0 20px;
 }
 
 .button-login {
@@ -52,6 +52,7 @@ input::placeholder {
 
 button:disabled {
   background-color: #0039e53a;
+  border: none;
 }
 
 button:hover:disabled {
