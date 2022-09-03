@@ -60,12 +60,13 @@ export default class Login extends Component {
                     />
                   </label>
                 </div>
-                <div>
+                <div className="container-button">
                   <button
                     type="button"
                     data-testid="login-submit-button"
                     disabled={ buttonDisabled }
                     onClick={ this.handleClick }
+                    className="button-login"
                   >
                     Entrar
                   </button>

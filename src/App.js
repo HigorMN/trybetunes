@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import ProfileEdit from './pages/ProfileEdit';
 import Search from './pages/Search';
 import './style/main.css';
+import './style/login.css';
 
 class App extends React.Component {
   render() {
