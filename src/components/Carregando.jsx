@@ -5,8 +5,18 @@ export default class Carregando extends Component {
   render() {
     const { className } = this.props;
     return (
-      <div>
-        <h1 className={ className }>Carregando...</h1>
+      <div className={ className }>
+        <div className="lds-roller">
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+        <h1>Carregando...</h1>
       </div>
     );
   }

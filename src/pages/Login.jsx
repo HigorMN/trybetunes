@@ -41,7 +41,7 @@ export default class Login extends Component {
     return (
       <div data-testid="page-login">
         {loading
-          ? <Carregando />
+          ? <Carregando className="login-loading" />
           : (
             <>
               <img
