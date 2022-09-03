@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import { createUser } from '../services/userAPI';
+import logoDark from '../images/logoDark.png';
 
 const NUMBER_MIN = 3;
 
@@ -43,7 +44,7 @@ export default class Login extends Component {
           ? <Carregando />
           : (
             <div>
-              <h1>Login</h1>
+              <img src={ logoDark } alt="Logo trybe tunes" />
               <label htmlFor="login">
                 <input
                   type="text"
