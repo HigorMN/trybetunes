@@ -29,6 +29,7 @@ body {
   margin-right: 49.3px;
   max-width: 600px;
   min-width: 200px;
+  transition: 0.9s;
 }
 
 .header-user-image {

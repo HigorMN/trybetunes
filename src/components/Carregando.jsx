@@ -3,20 +3,12 @@ import PropTypes from 'prop-types';
 
 export default class Carregando extends Component {
   render() {
-    const { className } = this.props;
+    const { className, classNameL } = this.props;
     return (
       <div className={ className }>
-        <div className="lds-roller">
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-        </div>
+        <div className={ classNameL } />
         <h1>Carregando...</h1>
+        <div />
       </div>
     );
   }

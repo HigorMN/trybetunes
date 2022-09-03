@@ -34,7 +34,11 @@ export default class Header extends Component {
           <img src={ logoWhite } alt="logo trybe tunes" className="header-logo" />
           <div />
           {loading
-            ? <Carregando />
+            ? (
+              <Carregando
+                className="user-icon user-loading"
+                classNameL="loader-min"
+              />)
             : (
               <div className="user-icon">
                 <img src={ userImgl } alt="" className="header-user-image" />
