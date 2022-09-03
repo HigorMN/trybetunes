@@ -49,10 +49,28 @@ export default class Header extends Component {
               </div>)}
         </div>
 
-        <nav>
-          <Link data-testid="link-to-search" to="/search">Pesquisar</Link>
-          <Link data-testid="link-to-favorites" to="/favorites">Favoritos</Link>
-          <Link data-testid="link-to-profile" to="/profile">Perfil</Link>
+        <nav className="header-nav">
+          <Link
+            data-testid="link-to-search"
+            to="/search"
+            className="link"
+          >
+            Pesquisa
+          </Link>
+          <Link
+            data-testid="link-to-favorites"
+            to="/favorites"
+            className="link"
+          >
+            Favoritas
+          </Link>
+          <Link
+            data-testid="link-to-profile"
+            to="/profile"
+            className="link"
+          >
+            Perfil
+          </Link>
         </nav>
 
       </header>

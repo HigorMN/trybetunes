@@ -47,3 +47,29 @@ body {
   margin-bottom: 30px;
   margin-left: 35px;
 }
+
+.header-nav {
+  align-items: center;
+  background-color: #f0f2f5;
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  height: 78px;
+}
+
+.link {
+  align-items: center;
+  color: #2fc18c;
+  font-size: 28px;
+  font-weight: 700;
+  padding: 23px 0;
+  text-decoration: none;
+  transition: 0.4s;
+  width: 100%;
+}
+
+.link:hover {
+  background-color: #036b52;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
