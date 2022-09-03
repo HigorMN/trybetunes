@@ -44,27 +44,30 @@ export default class Login extends Component {
           ? <Carregando />
           : (
             <div>
-              <img src={ logoDark } alt="Logo trybe tunes" />
-              <label htmlFor="login">
-                <input
-                  type="text"
-                  value={ name }
-                  name="login"
-                  id="login"
-                  data-testid="login-name-input"
-                  onChange={ this.handlechange }
-                  placeholder="Nome"
-                />
-              </label>
-              <button
-                type="button"
-                data-testid="login-submit-button"
-                disabled={ buttonDisabled }
-                onClick={ this.handleClick }
-              >
-                Entrar
-
-              </button>
+              <div>
+                <img src={ logoDark } alt="Logo trybe tunes" />
+              </div>
+              <form action="">
+                <label htmlFor="login">
+                  <input
+                    type="text"
+                    value={ name }
+                    name="login"
+                    id="login"
+                    data-testid="login-name-input"
+                    onChange={ this.handlechange }
+                    placeholder="Nome"
+                  />
+                </label>
+                <button
+                  type="button"
+                  data-testid="login-submit-button"
+                  disabled={ buttonDisabled }
+                  onClick={ this.handleClick }
+                >
+                  Entrar
+                </button>
+              </form>
             </div>)}
         { login && <Redirect to="/search" /> }
       </div>
