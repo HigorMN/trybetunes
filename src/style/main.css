@@ -7,18 +7,27 @@ body {
   background-color: #fafafa;
 }
 
-.login-container {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-}
-
 .container-form {
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   height: 314px;
-  width: 697px;
+  margin: auto;
+  max-width: 697px;
+  width: 75%;
+}
+
+.input-name {
+  background-color: white;
+  border: 1px solid #e1e5eb;
+  border-radius: 0;
+  display: block;
+  height: 45px;
+  margin: auto;
+  padding: 6px 8px;
+  width: 80%;
+}
+
+.login-name {
+  padding-top: 60px;
 }

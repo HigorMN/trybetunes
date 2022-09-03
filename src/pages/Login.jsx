@@ -39,16 +39,14 @@ export default class Login extends Component {
   render() {
     const { name, buttonDisabled, login, loading } = this.state;
     return (
-      <div data-testid="page-login" className="login-container">
+      <div data-testid="page-login">
         {loading
           ? <Carregando />
           : (
-            <div>
-              <div>
-                <img src={ logoDark } alt="Logo trybe tunes" />
-              </div>
-              <div className="container-form">
-                <form>
+            <>
+              <img src={ logoDark } alt="Logo trybe tunes" />
+              <form className="container-form">
+                <div className="login-name">
                   <label htmlFor="login">
                     <input
                       type="text"
@@ -58,8 +56,11 @@ export default class Login extends Component {
                       data-testid="login-name-input"
                       onChange={ this.handlechange }
                       placeholder="Nome"
+                      className="input-name"
                     />
                   </label>
+                </div>
+                <div>
                   <button
                     type="button"
                     data-testid="login-submit-button"
@@ -68,9 +69,10 @@ export default class Login extends Component {
                   >
                     Entrar
                   </button>
-                </form>
-              </div>
-            </div>)}
+                </div>
+              </form>
+            </>
+          )}
         { login && <Redirect to="/search" /> }
       </div>
     );
