@@ -30,8 +30,9 @@ export default class Header extends Component {
     const { user, loading, userImgl } = this.state;
     return (
       <header data-testid="header-component">
-        <div className="conteiner-header1">
-          <img src={ logoWhite } alt="logo trybe tunes" />
+        <div className="conteiner-header-cima">
+          <img src={ logoWhite } alt="logo trybe tunes" className="header-logo" />
+          <div />
           {loading
             ? <Carregando />
             : (

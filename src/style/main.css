@@ -8,11 +8,13 @@ body {
   text-align: center;
 }
 
-.conteiner-header1 {
+.conteiner-header-cima {
+  align-items: center;
   background-color: #023031;
   color: white;
   display: flex;
   height: 96px;
+  justify-content: space-between;
 }
 
 .user-icon {
@@ -24,6 +26,7 @@ body {
   display: flex;
   height: 42px;
   justify-content: space-between;
+  margin-right: 49.3px;
   max-width: 600px;
   min-width: 200px;
 }
@@ -37,4 +40,9 @@ body {
 
 .header-user-name {
   padding: 0 10px;
+}
+
+.header-logo {
+  margin-bottom: 30px;
+  margin-left: 35px;
 }
