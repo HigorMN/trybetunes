@@ -2,7 +2,23 @@
   background-color: white;
   border: 1px solid #3d495c;
   border-radius: 6px;
+  font-size: 18px;
   max-width: 519px;
   padding: 12px 16px;
   width: 50%;
+}
+
+.container-search {
+  margin-top: 50px;
+}
+
+.search-button {
+  background-color: #003be5;
+  border-radius: 2px;
+  color: white;
+  font-size: 16px;
+  height: 45px;
+  margin-left: 27px;
+  padding: 8px 32px;
+  width: 134px;
 }

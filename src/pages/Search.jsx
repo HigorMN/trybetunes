@@ -70,9 +70,9 @@ export default class Search extends Component {
             data-testid="search-artist-button"
             disabled={ buttonDisabled }
             onClick={ this.handleClick }
+            className="search-button"
           >
             Pesquisar
-
           </button>
         </form>
         <section>
