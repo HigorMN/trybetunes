@@ -31,7 +31,7 @@ export default class Profile extends Component {
     return (
       <div data-testid="page-profile">
         {loading
-          ? <Carregando />
+          ? <Carregando className="search-loading" classNameL="loader" />
           : (
             <div className="container-profile">
               <div className="img-link">

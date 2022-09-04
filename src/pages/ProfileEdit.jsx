@@ -76,7 +76,7 @@ export default class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit">
         {loading
-          ? <Carregando />
+          ? <Carregando className="search-loading" classNameL="loader" />
           : (
             <div className="profile-edit-container">
               <label htmlFor="name">
