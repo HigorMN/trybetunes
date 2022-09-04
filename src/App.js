@@ -19,19 +19,19 @@ class App extends React.Component {
     return (
       <Switch>
         <Route exact path="/search">
-          <Header />
+          <Header className1="link1" />
           <Search />
         </Route>
         <Route exact path="/favorites">
-          <Header />
+          <Header className2="link1" />
           <Favorites />
         </Route>
         <Route exact path="/profile" component={ Profile }>
-          <Header />
+          <Header className="link1" />
           <Profile />
         </Route>
         <Route exact path="/profile/edit">
-          <Header />
+          <Header className="link1" />
           <ProfileEdit />
         </Route>
         <Route exact path="/album/:id" component={ Album } />

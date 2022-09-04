@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getUser } from '../services/userAPI';
 import Carregando from './Carregando';
 import logoWhite from '../images/logoWhite.png';
@@ -28,6 +29,8 @@ export default class Header extends Component {
 
   render() {
     const { user, loading, userImgl } = this.state;
+    const { className1, className2, className } = this.props;
+
     return (
       <header data-testid="header-component">
         <div className="conteiner-header-cima">
@@ -52,21 +55,21 @@ export default class Header extends Component {
           <Link
             data-testid="link-to-search"
             to="/search"
-            className="link"
+            className={ `link ${className1}` }
           >
             Pesquisa
           </Link>
           <Link
             data-testid="link-to-favorites"
             to="/favorites"
-            className="link"
+            className={ `link ${className2}` }
           >
             Favoritas
           </Link>
           <Link
             data-testid="link-to-profile"
             to="/profile"
-            className="link"
+            className={ `link ${className}` }
           >
             Perfil
           </Link>
@@ -75,3 +78,9 @@ export default class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  className1: PropTypes.string,
+  className2: PropTypes.string,
+  className3: PropTypes.string,
+}.isRequired;
