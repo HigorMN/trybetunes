@@ -14,6 +14,7 @@ import './style/loading.css';
 import './style/search.css';
 import './style/album.css';
 import './style/favorites.css';
+import './style/profile.css';
 
 class App extends React.Component {
   render() {

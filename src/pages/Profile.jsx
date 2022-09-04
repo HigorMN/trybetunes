@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Carregando from '../components/Carregando';
 import { getUser } from '../services/userAPI';
+import userImg from '../images/userImg.png';
 
 export default class Profile extends Component {
   state = {
     loading: true,
     info: {},
+    userImgl: '',
   };
 
   componentDidMount() {
@@ -15,22 +17,23 @@ export default class Profile extends Component {
 
   fetchUser = async () => {
     const fetch = await getUser();
-    this.setState({ loading: false, info: fetch });
+    const validImage = fetch.image.length > 0 ? fetchAPI.image : userImg;
+    this.setState({ loading: false, info: fetch, userImgl: validImage });
   };
 
   render() {
-    const { loading, info } = this.state;
+    const { loading, info, userImgl } = this.state;
     return (
       <div data-testid="page-profile">
         {loading
           ? <Carregando />
           : (
-            <div>
+            <div className="container-profile">
+              <img src={ userImgl } alt={ info.name } data-testid="profile-image" />
+              <Link to="/profile/edit">Editar perfil</Link>
               <p>{info.name}</p>
               <p>{info.email}</p>
               <p>{info.description}</p>
-              <img src={ info.image } alt={ info.name } data-testid="profile-image" />
-              <Link to="/profile/edit">Editar perfil</Link>
             </div>)}
       </div>
     );
