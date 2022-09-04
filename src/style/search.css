@@ -74,3 +74,19 @@
   height: 180px;
   width: 180px;
 }
+
+.search-container-name {
+  line-height: 150%;
+  margin-left: 16px;
+  text-align: start;
+}
+
+.search-container-name h4 {
+  color: #3d495c;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.colecao {
+
+}
