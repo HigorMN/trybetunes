@@ -34,13 +34,16 @@ export default class MusicCard extends Component {
         {loading
           ? <Carregando />
           : (
-            <div>
-              <h2>{trackName}</h2>
+            <div className="album-music">
+              <p>{trackName}</p>
               <audio data-testid="audio-component" src={ previewUrl } controls>
                 <track kind="captions" />
               </audio>
-              <label htmlFor={ trackId } data-testid={ `checkbox-music-${trackId}` }>
-                Favorita
+              <label
+                htmlFor={ trackId }
+                className="like"
+                data-testid={ `checkbox-music-${trackId}` }
+              >
                 <input
                   type="checkbox"
                   value={ trackId }
@@ -48,7 +51,9 @@ export default class MusicCard extends Component {
                   id={ trackId }
                   checked={ (checked3 && checked) || checked2 }
                   onChange={ this.handleChange }
+                  className="checkbox"
                 />
+                <i />
               </label>
             </div>)}
       </div>

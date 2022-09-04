@@ -4,6 +4,11 @@
   margin-top: 50px;
 }
 
+.album-container li {
+  list-style-type: none;
+  margin-left: 79px;
+}
+
 .album-artist {
   width: 120px;
 }
@@ -21,4 +26,38 @@
 .album-artist p {
   color: #023031;
   margin-top: 5px;
+}
+
+.album-music {
+  align-items: center;
+  border-top: 1px solid #e1e5eb;
+  color: #001813;
+  display: flex;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.album-music p {
+  padding-right: 20px;
+  width: 250px;
+}
+
+.like > input {
+  visibility: hidden;
+}
+
+.like > input + i {
+  background: url('../images/Rectangle1.png') no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  transition: 0.5s;
+  width: 25px;
+}
+
+.like > input:checked + i {
+  background: url('../images/Rectangle2.png') no-repeat;
+  background-size: cover;
 }
