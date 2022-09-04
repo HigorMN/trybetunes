@@ -51,7 +51,6 @@ export default class MusicCard extends Component {
                   id={ trackId }
                   checked={ (checked3 && checked) || checked2 }
                   onChange={ this.handleChange }
-                  className="checkbox"
                 />
                 <i />
               </label>

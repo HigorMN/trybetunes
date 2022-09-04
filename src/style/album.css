@@ -1,6 +1,6 @@
 .album-container {
   display: flex;
-  margin: 0 179px;
+  justify-content: center;
   margin-top: 50px;
 }
 

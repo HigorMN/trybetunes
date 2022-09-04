@@ -46,8 +46,8 @@ export default class Favorites extends Component {
                   <label
                     htmlFor={ e.trackId }
                     data-testid={ `checkbox-music-${e.trackId}` }
+                    className="like"
                   >
-                    Favorita
                     <input
                       type="checkbox"
                       value={ e.trackId }
@@ -56,6 +56,7 @@ export default class Favorites extends Component {
                       checked={ favoritos.find((i) => (i === e.trackId)) }
                       onChange={ this.handleChange }
                     />
+                    <i />
                   </label>
                 </li>
               ))}
