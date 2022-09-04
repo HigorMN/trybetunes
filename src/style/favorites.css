@@ -47,7 +47,11 @@
   color: #001813;
   font-size: 18px;
   font-weight: 400;
-  width: 300px;
+  overflow: hidden;
+  padding-right: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
 }
 
 .favorites-list audio {

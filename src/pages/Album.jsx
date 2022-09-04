@@ -38,7 +38,7 @@ export default class Album extends Component {
       <div data-testid="page-album">
         <Header />
         { loading
-          ? <Carregando />
+          ? <Carregando className="loading-favorites" classNameL="loader" />
           : (
             <div>
               {musicas.length > 0 && (

@@ -80,6 +80,8 @@ export default class ProfileEdit extends Component {
           : (
             <div className="profile-edit-container">
               <label htmlFor="name">
+                <h2>Nome</h2>
+                <p />
                 Nome
                 <input
                   value={ name }
@@ -87,6 +89,7 @@ export default class ProfileEdit extends Component {
                   name="name"
                   id="name"
                   data-testid="edit-input-name"
+                  className="form-control"
                   onChange={ this.handleChange }
                 />
               </label>
@@ -97,6 +100,7 @@ export default class ProfileEdit extends Component {
                   type="email"
                   name="email"
                   id="email"
+                  className="form-control"
                   data-testid="edit-input-email"
                   onChange={ this.handleChange }
                 />
@@ -107,6 +111,7 @@ export default class ProfileEdit extends Component {
                   value={ description }
                   name="description"
                   id="descricao"
+                  className="form-control"
                   data-testid="edit-input-description"
                   onChange={ this.handleChange }
                 />
@@ -118,6 +123,7 @@ export default class ProfileEdit extends Component {
                   type="text"
                   name="image"
                   id="image"
+                  className="form-control"
                   data-testid="edit-input-image"
                   onChange={ this.handleChange }
                 />
@@ -127,6 +133,7 @@ export default class ProfileEdit extends Component {
                 data-testid="edit-button-save"
                 onClick={ this.handleClick }
                 disabled={ !btnDisabled }
+                className="search-button"
               >
                 salvar
 
