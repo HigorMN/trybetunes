@@ -30,6 +30,10 @@
   cursor: pointer;
 }
 
+.search-section {
+  margin: 0 60px;
+}
+
 .search-h3 {
   color: #001813;
   font-size: 24px;
@@ -37,7 +41,7 @@
   font-weight: 300;
   line-height: 25px;
   margin-bottom: 30px;
-  margin-left: 112px;
+  margin-left: 12.5px;
   margin-top: 30px;
   text-align: start;
 }
@@ -45,16 +49,19 @@
 .search-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
 }
 
 .serach-album {
   list-style-type: none;
-  margin-left: 0;
+  margin: 0 12.5px;
 }
 
 .serach-album img {
+  height: 150px;
+  width: 150px;
+}
+
+.search-container-name {
   height: 150px;
   width: 150px;
 }

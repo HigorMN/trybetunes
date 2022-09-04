@@ -75,7 +75,7 @@ export default class Search extends Component {
             Pesquisar
           </button>
         </form>
-        <section>
+        <section className="search-section">
           {loading && <Carregando className="search-loading" classNameL="loader" />}
           {ApiOn && (
             <>
@@ -84,15 +84,15 @@ export default class Search extends Component {
                 {artistaAPI.map((e) => (
                   <li key={ e.collectionId } className="serach-album">
                     <img src={ e.artworkUrl100 } alt={ e.artistName } />
-                    <Link
-                      to={ `/album/${e.collectionId}` }
-                      data-testid={ `link-to-album-${e.collectionId}` }
-                    >
-                      Coleção
-                    </Link>
                     <div className="search-container-name">
                       <h4>{e.collectionName}</h4>
                       <p>{e.artistName}</p>
+                      <Link
+                        to={ `/album/${e.collectionId}` }
+                        data-testid={ `link-to-album-${e.collectionId}` }
+                      >
+                        Coleção
+                      </Link>
                     </div>
                   </li>
                 ))}
