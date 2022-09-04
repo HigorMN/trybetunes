@@ -22,3 +22,8 @@
   padding: 8px 32px;
   width: 134px;
 }
+
+.search-button:hover {
+  background-color: #043ff2;
+  cursor: pointer;
+}
