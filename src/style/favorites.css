@@ -36,6 +36,14 @@
   width: 60px;
 }
 
+.favorites-list p {
+  display: none;
+}
+
+.favorites-list label {
+  margin-bottom: 10px;
+}
+
 .favorites-list h2 {
   color: #001813;
   font-size: 22px;

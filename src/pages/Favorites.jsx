@@ -50,7 +50,7 @@ export default class Favorites extends Component {
                     data-testid={ `checkbox-music-${e.trackId}` }
                     className="like"
                   >
-                    Favorita
+                    <p>Favorita</p>
                     <input
                       type="checkbox"
                       value={ e.trackId }
