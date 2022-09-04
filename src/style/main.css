@@ -43,6 +43,10 @@ body {
   padding: 0 10px;
 }
 
+.user-link {
+  text-decoration: none;
+}
+
 .header-logo {
   margin-bottom: 30px;
   margin-left: 35px;

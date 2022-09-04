@@ -43,13 +43,15 @@ export default class Header extends Component {
                 classNameL="loader-min"
               />)
             : (
-              <div className="user-icon">
-                <img src={ userImgl } alt="" className="header-user-image" />
-                <h2 data-testid="header-user-name" className="header-user-name">
-                  {user}
-                </h2>
-                <div />
-              </div>)}
+              <Link to="/profile" className="user-link">
+                <div className="user-icon">
+                  <img src={ userImgl } alt="" className="header-user-image" />
+                  <h2 data-testid="header-user-name" className="header-user-name">
+                    {user}
+                  </h2>
+                  <div />
+                </div>
+              </Link>)}
         </div>
         <nav className="header-nav">
           <Link
