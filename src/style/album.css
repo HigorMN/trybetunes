@@ -1,0 +1,24 @@
+.album-container {
+  display: flex;
+  margin: 0 179px;
+  margin-top: 50px;
+}
+
+.album-artist {
+  width: 120px;
+}
+
+.album-artist img {
+  border-radius: 6px;
+  width: 120px;
+}
+
+.album-artist h4 {
+  color: #023031;
+  margin-top: 10px;
+}
+
+.album-artist p {
+  color: #023031;
+  margin-top: 5px;
+}

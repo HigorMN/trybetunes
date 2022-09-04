@@ -42,9 +42,12 @@ export default class Album extends Component {
           : (
             <div>
               {musicas.length > 0 && (
-                <div>
-                  <p data-testid="artist-name">{musicas[0].artistName}</p>
-                  <p data-testid="album-name">{musicas[0].collectionName}</p>
+                <div className="album-container">
+                  <div className="album-artist">
+                    <img src={ musicas[0].artworkUrl100 } alt="" />
+                    <h4 data-testid="album-name">{musicas[0].collectionName}</h4>
+                    <p data-testid="artist-name">{musicas[0].artistName}</p>
+                  </div>
                   <ul>
                     {musicas.map((e, index) => (
                       index > 0 && (
