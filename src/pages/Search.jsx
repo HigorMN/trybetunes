@@ -76,7 +76,7 @@ export default class Search extends Component {
           </button>
         </form>
         <section>
-          {loading && <Carregando />}
+          {loading && <Carregando className="search-loading" classNameL="loader" />}
           {ApiOn && (
             <>
               <h3>{`Resultado de álbuns de: ${nameArtista}`}</h3>
