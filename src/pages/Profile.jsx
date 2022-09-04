@@ -17,7 +17,7 @@ export default class Profile extends Component {
 
   fetchUser = async () => {
     const fetch = await getUser();
-    const validImage = fetch.image.length > 0 ? fetchAPI.image : userImg;
+    const validImage = fetch.image.length > 0 ? fetch.image : userImg;
     this.setState({ loading: false, info: fetch, userImgl: validImage });
   };
 
