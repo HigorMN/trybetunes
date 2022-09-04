@@ -78,11 +78,27 @@ export default class ProfileEdit extends Component {
         {loading
           ? <Carregando className="search-loading" classNameL="loader" />
           : (
-            <div className="profile-edit-container">
+            <form className="profile-edit-container">
+              <div className="img-link-edit">
+                <div>
+                  <img src={ image } alt="" />
+                </div>
+                <label htmlFor="image">
+                  <input
+                    value={ image }
+                    type="text"
+                    name="image"
+                    id="image"
+                    className="form-control"
+                    data-testid="edit-input-image"
+                    onChange={ this.handleChange }
+                    placeholder="Insira o link da imagem"
+                  />
+                </label>
+              </div>
               <label htmlFor="name">
                 <h2>Nome</h2>
-                <p />
-                Nome
+                <p>Fique à vontade para usar seu nome social</p>
                 <input
                   value={ name }
                   type="text"
@@ -90,11 +106,13 @@ export default class ProfileEdit extends Component {
                   id="name"
                   data-testid="edit-input-name"
                   className="form-control"
+                  placeholder="Seu nome"
                   onChange={ this.handleChange }
                 />
               </label>
               <label htmlFor="email">
-                Email
+                <h2>Email</h2>
+                <p>Escolha um e-mail que consulte diariamente</p>
                 <input
                   value={ email }
                   type="email"
@@ -102,29 +120,19 @@ export default class ProfileEdit extends Component {
                   id="email"
                   className="form-control"
                   data-testid="edit-input-email"
+                  placeholder="usuario@usuario.com.br"
                   onChange={ this.handleChange }
                 />
               </label>
               <label htmlFor="descricao">
-                Descrição
+                <h2>Descrição</h2>
                 <textarea
                   value={ description }
                   name="description"
                   id="descricao"
                   className="form-control"
                   data-testid="edit-input-description"
-                  onChange={ this.handleChange }
-                />
-              </label>
-              <label htmlFor="image">
-                Link da imagem
-                <input
-                  value={ image }
-                  type="text"
-                  name="image"
-                  id="image"
-                  className="form-control"
-                  data-testid="edit-input-image"
+                  placeholder="Sobre mim"
                   onChange={ this.handleChange }
                 />
               </label>
@@ -136,9 +144,8 @@ export default class ProfileEdit extends Component {
                 className="search-button"
               >
                 salvar
-
               </button>
-            </div>)}
+            </form>)}
         {redirect && <Redirect to="/profile" />}
       </div>
     );
