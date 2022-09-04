@@ -29,3 +29,15 @@
   background-color: #043ff2;
   cursor: pointer;
 }
+
+.search-h3 {
+  color: #001813;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 30px;
+  margin-left: 112px;
+  margin-top: 30px;
+  text-align: start;
+}

@@ -79,7 +79,7 @@ export default class Search extends Component {
           {loading && <Carregando className="search-loading" classNameL="loader" />}
           {ApiOn && (
             <>
-              <h3>{`Resultado de álbuns de: ${nameArtista}`}</h3>
+              <h3 className="search-h3">{`Resultado de álbuns de: ${nameArtista}`}</h3>
               <ul>
                 {artistaAPI.map((e) => (
                   <li key={ e.collectionId }>
