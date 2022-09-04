@@ -11,6 +11,7 @@ import Search from './pages/Search';
 import './style/main.css';
 import './style/login.css';
 import './style/loading.css';
+import './style/search.css';
 
 class App extends React.Component {
   render() {

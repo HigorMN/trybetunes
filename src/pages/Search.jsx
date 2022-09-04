@@ -55,7 +55,7 @@ export default class Search extends Component {
       APIvazio,
     } = this.state;
     return (
-      <div data-testid="page-search">
+      <div data-testid="page-search" className="container-search">
         <form>
           <input
             type="text"
@@ -63,6 +63,7 @@ export default class Search extends Component {
             data-testid="search-artist-input"
             placeholder="Nome do Artista"
             onChange={ this.handleChange }
+            className="search-input"
           />
           <button
             type="button"
@@ -77,7 +78,7 @@ export default class Search extends Component {
         <section>
           {loading && <Carregando />}
           {ApiOn && (
-            <div>
+            <>
               <h3>{`Resultado de álbuns de: ${nameArtista}`}</h3>
               <ul>
                 {artistaAPI.map((e) => (
@@ -88,14 +89,13 @@ export default class Search extends Component {
                       data-testid={ `link-to-album-${e.collectionId}` }
                     >
                       Coleção
-
                     </Link>
                     <h4>{e.collectionName}</h4>
                     <h4>{e.artistName}</h4>
                   </li>
                 ))}
               </ul>
-            </div>) }
+            </>) }
           {APIvazio && <h1>Nenhum álbum foi encontrado</h1>}
         </section>
       </div>
