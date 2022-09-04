@@ -1,6 +1,7 @@
 .favorites-container {
-  margin-left: 170px;
+  margin: auto;
   margin-top: 50px;
+  width: 90%;
 }
 
 .favorites-container h3 {
@@ -14,11 +15,35 @@
 .favorites-list {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  margin: auto;
+  max-width: 1079px;
+  width: 60%;
 }
 
 .favorites-list li {
   align-items: center;
   border-top: 1px solid #e1e5eb;
   display: flex;
+  margin: auto;
+  margin-left: 40px;
+  padding: 10px 50px;
+}
+
+.favorites-list img {
+  border-radius: 50%;
+  height: 60px;
+  margin-right: 20px;
+  width: 60px;
+}
+
+.favorites-list h2 {
+  color: #001813;
+  font-size: 22px;
+  font-weight: 400;
+  width: 250px;
+}
+
+.favorites-list audio {
+  margin-right: 20px;
+  min-width: 250px;
 }
