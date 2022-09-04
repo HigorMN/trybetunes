@@ -80,9 +80,9 @@ export default class Search extends Component {
           {ApiOn && (
             <>
               <h3 className="search-h3">{`Resultado de álbuns de: ${nameArtista}`}</h3>
-              <ul>
+              <ul className="search-list">
                 {artistaAPI.map((e) => (
-                  <li key={ e.collectionId }>
+                  <li key={ e.collectionId } className="serach-album">
                     <img src={ e.artworkUrl100 } alt={ e.artistName } />
                     <Link
                       to={ `/album/${e.collectionId}` }
@@ -90,8 +90,10 @@ export default class Search extends Component {
                     >
                       Coleção
                     </Link>
-                    <h4>{e.collectionName}</h4>
-                    <h4>{e.artistName}</h4>
+                    <div className="search-container-name">
+                      <h4>{e.collectionName}</h4>
+                      <p>{e.artistName}</p>
+                    </div>
                   </li>
                 ))}
               </ul>
