@@ -32,13 +32,16 @@ export default class Favorites extends Component {
 
   render() {
     const { loading, musicas, favoritos } = this.state;
+    console.log(musicas);
     return (
-      <div data-testid="page-favorites">
+      <div data-testid="page-favorites" className="favorites-container">
         { loading ? <Carregando /> : (
-          <div>
-            <ul>
+          <>
+            <h3>Músicas favoritas:</h3>
+            <ul className="favorites-list">
               {musicas.map((e, index) => (
                 <li key={ index }>
+                  <img src={ e.artworkUrl100 } alt="" />
                   <h2>{e.trackName}</h2>
                   <audio data-testid="audio-component" src={ e.previewUrl } controls>
                     <track kind="captions" />
@@ -61,7 +64,7 @@ export default class Favorites extends Component {
                 </li>
               ))}
             </ul>
-          </div>)}
+          </>)}
       </div>
     );
   }

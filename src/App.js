@@ -13,6 +13,7 @@ import './style/login.css';
 import './style/loading.css';
 import './style/search.css';
 import './style/album.css';
+import './style/favorites.css';
 
 class App extends React.Component {
   render() {
