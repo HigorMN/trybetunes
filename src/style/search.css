@@ -64,7 +64,10 @@
 }
 
 .search-container-img {
-  
+  background: linear-gradient(-45deg, #0b0c0c, #2fc18c, #2fc18c, #0b0c0c);
+  border-radius: 6px 6px 0 0;
+  height: 180px;
+  margin-bottom: 16px;
 }
 
 .serach-album img {
