@@ -40,6 +40,7 @@ export default class Search extends Component {
         artistaAPI: fetchAPI,
         loading: false,
         ApiOn: true,
+        APIvazio: false,
       });
     }
   };
@@ -101,7 +102,7 @@ export default class Search extends Component {
                 ))}
               </ul>
             </>) }
-          {APIvazio && <h1>Nenhum álbum foi encontrado</h1>}
+          {APIvazio && <p className="api-vazio">Nenhum álbum foi encontrado</p>}
         </section>
       </div>
     );

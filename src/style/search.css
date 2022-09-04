@@ -91,3 +91,12 @@
   font-weight: 700;
   margin-bottom: 15px;
 }
+
+.api-vazio {
+  color: #023031;
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 60px;
+  margin-top: 100px;
+}
