@@ -32,7 +32,6 @@ export default class Favorites extends Component {
 
   render() {
     const { loading, musicas, favoritos } = this.state;
-    console.log(musicas);
     return (
       <div data-testid="page-favorites" className="favorites-container">
         { loading ? <Carregando /> : (
@@ -51,6 +50,7 @@ export default class Favorites extends Component {
                     data-testid={ `checkbox-music-${e.trackId}` }
                     className="like"
                   >
+                    Favorita
                     <input
                       type="checkbox"
                       value={ e.trackId }
