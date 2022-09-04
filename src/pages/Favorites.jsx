@@ -34,7 +34,7 @@ export default class Favorites extends Component {
     const { loading, musicas, favoritos } = this.state;
     return (
       <div data-testid="page-favorites" className="favorites-container">
-        { loading ? <Carregando /> : (
+        { loading ? <Carregando className="loading-favorites" classNameL="loader" /> : (
           <>
             <h3>Músicas favoritas:</h3>
             <ul className="favorites-list">

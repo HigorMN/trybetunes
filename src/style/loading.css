@@ -37,7 +37,7 @@
   padding: 0 10px;
 }
 
-.search-loading {
+.search-loading, .loading-favorites {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -45,6 +45,6 @@
   margin: 60px auto;
 }
 
-.search-loading h1 {
+.search-loading h1, .loading-favorites h1 {
   padding: 10px;
 }
