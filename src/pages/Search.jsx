@@ -83,7 +83,9 @@ export default class Search extends Component {
               <ul className="search-list">
                 {artistaAPI.map((e) => (
                   <li key={ e.collectionId } className="serach-album">
-                    <img src={ e.artworkUrl100 } alt={ e.artistName } />
+                    <div className="search-container-img">
+                      <img src={ e.artworkUrl100 } alt={ e.artistName } />
+                    </div>
                     <div className="search-container-name">
                       <h4>{e.collectionName}</h4>
                       <p>{e.artistName}</p>
