@@ -1,8 +1,42 @@
 .container-profile {
   margin-top: 50px;
+  text-align: start;
 }
 
 .container-profile img {
+  border-radius: 50%;
   height: 80px;
+  margin-right: 100px;
   width: 80px;
+}
+
+.container-profile a {
+  border: 1px solid #003be5;
+  border-radius: 6px;
+  color: #003be5;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.img-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.container-name {
+  margin: auto;
+  width: 280px;
+}
+
+.container-name h2 {
+  color: #3d495c;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.container-name p {
+  color: #3d495c;
+  margin-bottom: 30px;
 }
