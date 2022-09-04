@@ -64,10 +64,15 @@
 }
 
 .search-container-img {
-  background: linear-gradient(-45deg, #0b0c0c, #2fc18c, #2fc18c, #0b0c0c);
+  background: linear-gradient(20deg, #ac50f2 15%, #2fc18c 87%);
+  background-color: #2fc18c;
   border-radius: 6px 6px 0 0;
   height: 180px;
-  margin-bottom: 16px;
+  margin-bottom: 25px;
+}
+
+.search-container-img:hover {
+  background: linear-gradient(-15deg, #ac50f2 15%, #2fc18c 70%);
 }
 
 .serach-album img {
@@ -76,7 +81,6 @@
 }
 
 .search-container-name {
-  line-height: 150%;
   margin-left: 16px;
   text-align: start;
 }
@@ -85,8 +89,5 @@
   color: #3d495c;
   font-size: 16px;
   font-weight: 700;
-}
-
-.colecao {
-
+  margin-bottom: 15px;
 }

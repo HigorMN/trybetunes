@@ -92,12 +92,11 @@ export default class Search extends Component {
                       </div>
                     </Link>
                     <div className="search-container-name">
-                      <h4>{e.collectionName}</h4>
+                      <Link to={ `/album/${e.collectionId}` } className="colecao">
+                        <h4>{e.collectionName}</h4>
+                      </Link>
                       <p>{e.artistName}</p>
                     </div>
-                    <Link to={ `/album/${e.collectionId}` } className="colecao">
-                      Coleção
-                    </Link>
                   </li>
                 ))}
               </ul>
