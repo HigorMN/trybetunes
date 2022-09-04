@@ -31,7 +31,8 @@
 }
 
 .search-section {
-  margin: 0 40px;
+  margin: auto;
+  width: 85%;
 }
 
 .search-h3 {
@@ -49,6 +50,7 @@
 .search-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .serach-album {

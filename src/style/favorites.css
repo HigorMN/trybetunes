@@ -45,9 +45,9 @@
 
 .favorites-list h2 {
   color: #001813;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
-  min-width: 250px;
+  width: 300px;
 }
 
 .favorites-list audio {

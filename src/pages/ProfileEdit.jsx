@@ -78,7 +78,7 @@ export default class ProfileEdit extends Component {
         {loading
           ? <Carregando />
           : (
-            <div>
+            <div className="profile-edit-container">
               <label htmlFor="name">
                 Nome
                 <input

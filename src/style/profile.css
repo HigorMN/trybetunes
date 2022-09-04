@@ -40,3 +40,8 @@
   color: #3d495c;
   margin-bottom: 30px;
 }
+
+.profile-edit-container {
+  display: flex;
+  flex-direction: column;
+}
